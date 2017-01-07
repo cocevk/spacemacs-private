@@ -1,0 +1,69 @@
+#+TITLE: kris-layer layer
+
+
+* Instructions
+** Structure
+ Configuration is organized in layers. Each layer has the following structure:
+
+ #+BEGIN_EXAMPLE
+     [layer_name]
+       |__ [local]
+       | |__ [package 1]
+       | |     ...
+       | |__ [package n]
+       |-- layers.el
+       |__ packages.el
+       |__ funcs.el
+       |__ config.el
+       |__ keybindings.el
+
+     [] = directory
+ #+END_EXAMPLE
+
+ Where:
+
+ | File           | Usage                                                                                            |
+ |----------------+--------------------------------------------------------------------------------------------------|
+ | layers.el      | The place to declare additional layers                                                           |
+ | packages.el    | The list of packages and their configuration functions (init, post-init, etc...)                 |
+ | funcs.el       | All functions defined in the layer (used in package configuration for instance)                  |
+ | config.el      | Layer configuration (defines the layer variables default values and setup some config variables) |
+ | keybindings.el | General key bindings no tied to a specific package configuration                                 |
+
+ =Packages= can be:
+ - =ELPA= packages installed from an =ELPA= compliant repository
+ - local packages in a layer's =local= folder
+ - installed from an online source using [[https://github.com/quelpa/quelpa][quelpa]].
+
+* Notes
+ # The maximum height of the logo should be 200 pixels.
+ [[img/kris-layer.png]]
+
+ # TOC links should be GitHub style anchors.
+* Table of Contents                                        :TOC_4_gh:noexport:
+ - [[#instructions][Instructions]]
+   - [[#structure][Structure]]
+ - [[#notes][Notes]]
+ - [[#description][Description]]
+ - [[#install][Install]]
+ - [[#key-bindings][Key bindings]]
+
+* Description
+This layer does wonderful things:
+  - thing01
+
+* Install
+To use this configuration layer, add it to your =~/.spacemacs=. You will need to
+add =kris-layer= to the existing =dotspacemacs-configuration-layers= list in this
+file.
+
+* Key bindings
+
+| Key Binding | Description    |
+|-------------+----------------|
+| ~SPC x x x~ | Does thing01   |
+# Use GitHub URLs if you wish to link a Spacemacs documentation file or its heading.
+# Examples:
+# [[https://github.com/syl20bnr/spacemacs/blob/master/doc/VIMUSERS.org#sessions]]
+# [[https://github.com/syl20bnr/spacemacs/blob/master/layers/%2Bfun/emoji/README.org][Link to Emoji layer README.org]]
+# If space-doc-mode is enabled, Spacemacs will open a local copy of the linked file.

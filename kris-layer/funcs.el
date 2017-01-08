@@ -4,10 +4,10 @@
   (interactive)
   (find-file "~/Dropbox/org/")
   )
-(defun korg-open-refile ()
+(defun korg-open-inbox ()
   "Open the org refile"
   (interactive)
-  (find-file "~/Dropbox/org/refile.org")
+  (find-file "~/Dropbox/org/inbox.org")
   )
 (defun korg-open-notes ()
   "Open the org notes"
@@ -49,20 +49,21 @@
 (setq org-agenda-files '("~/Dropbox/org"))
 
 (setq org-capture-templates
-      '(("r" "Refile" entry (file "~/Dropbox/org/refile.org")
-         "** TODO %?\n %i\n %a")
+      '(
         ("t" "Todo" entry (file+headline "~/Dropbox/org/todo.org" "Tasks")
-         "* TODO %?\n %i\n %a")
-        ("n" "CS Notes Entry" entry (file+datetree "~/Dropbox/org/notes.org")
-         "* %?\nEntered on %U\n %i\n %a")
+         "* TODO %?\n %i")
+        ("n" "Notes Entry" entry (file+datetree "~/Dropbox/org/notes.org")
+         "* %?\nEntered on %U\n %i")
         ("h" "Halcom Notes Entry" entry (file+datetree "~/Dropbox/org/halcom.org")
-         "* %?\nEntered on %U\n %i\n %a")
+         "* %?\nEntered on %U\n %i")
+        ("i" "Inbox" entry (file+datetree "~/Dropbox/org/inbox.org")
+         "* %?\nEntered on %U\n %i")
         )
       )
 ;; This first element of org-refile-targets decides the heading levels to consider within current file, the second element - within other agenda files.
 (setq org-refile-targets
       '((nil :maxlevel . 3)
-        (org-agenda-files :maxlevel . 3)))
+        (org-agenda-files :maxlevel . 2)))
 
 ;; Other stuff
 (setq-default evil-escape-key-sequence "jk")

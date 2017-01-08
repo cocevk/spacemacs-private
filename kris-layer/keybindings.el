@@ -5,7 +5,7 @@
 (evil-leader/set-key "on" 'korg-open-notes)
 (evil-leader/set-key "oh" 'korg-open-halcom)
 (evil-leader/set-key "oc" 'org-capture)
-(evil-leader/set-key "or" 'korg-open-refile)
+(evil-leader/set-key "oi" 'korg-open-inbox)
 (evil-leader/set-key "oek" 'kris-edit-keybindings)
 (evil-leader/set-key "oef" 'kris-edit-funcs)
 (evil-leader/set-key "of" 'ff-find-other-file)

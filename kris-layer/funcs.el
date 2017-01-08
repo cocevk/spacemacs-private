@@ -14,10 +14,15 @@
   (interactive)
   (find-file "~/Dropbox/org/notes.org")
   )
-(defun korg-open-tasks ()
-  "Open the org tasks"
+(defun korg-open-todo ()
+  "Open the org todo"
   (interactive)
-  (find-file "~/Dropbox/org/journal.org")
+  (find-file "~/Dropbox/org/todo.org")
+  )
+(defun korg-open-halcom ()
+  "Open the org halcom"
+  (interactive)
+  (find-file "~/Dropbox/org/halcom.org")
   )
 (defun kris-edit-keybindings ()
   "Edit keybindings in kris-layer"
@@ -30,7 +35,8 @@
   (find-file "~/.emacs.d/private/kris-layer/funcs.el")
   )
 
-(defun my-org-archive-done-tasks ()
+(defun korg-archive-done-tasks ()
+  "Archive DONE tasks"
   (interactive)
   (org-map-entries 'org-archive-subtree "/DONE" 'file)
   )
@@ -47,11 +53,18 @@
          "** TODO %?\n %i\n %a")
         ("t" "Todo" entry (file+headline "~/Dropbox/org/todo.org" "Tasks")
          "* TODO %?\n %i\n %a")
-        ("n" "Notes Entry" entry (file+datetree "~/Dropbox/org/notes.org")
+        ("n" "CS Notes Entry" entry (file+datetree "~/Dropbox/org/notes.org")
+         "* %?\nEntered on %U\n %i\n %a")
+        ("h" "Halcom Notes Entry" entry (file+datetree "~/Dropbox/org/halcom.org")
          "* %?\nEntered on %U\n %i\n %a")
         )
       )
+;; This first element of org-refile-targets decides the heading levels to consider within current file, the second element - within other agenda files.
+(setq org-refile-targets
+      '((nil :maxlevel . 3)
+        (org-agenda-files :maxlevel . 3)))
 
+;; Other stuff
 (setq-default evil-escape-key-sequence "jk")
 ;; Display time in the powerline
 (display-time-mode 1)

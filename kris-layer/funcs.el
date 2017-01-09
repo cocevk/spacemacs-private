@@ -51,13 +51,13 @@
 (setq org-capture-templates
       '(
         ("t" "Todo" entry (file+headline "~/Dropbox/org/todo.org" "Tasks")
-         "* TODO %?\n %i")
+         "* TODO %?")
         ("n" "Notes Entry" entry (file+datetree "~/Dropbox/org/notes.org")
-         "* %?\nEntered on %U\n %i")
+         "* %?\nEntered on %U via capture")
         ("h" "Halcom Notes Entry" entry (file+datetree "~/Dropbox/org/halcom.org")
-         "* %?\nEntered on %U\n %i")
+         "* %?\nEntered on %U via capture")
         ("i" "Inbox" entry (file+datetree "~/Dropbox/org/inbox.org")
-         "* %?\nEntered on %U\n %i")
+         "* %?\nEntered on %U via capture")
         )
       )
 ;; This first element of org-refile-targets decides the heading levels to consider within current file, the second element - within other agenda files.

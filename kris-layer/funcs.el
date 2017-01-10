@@ -19,10 +19,15 @@
   (interactive)
   (find-file "~/Dropbox/org/todo.org")
   )
+(defun korg-open-personal ()
+  "Open the org personal"
+  (interactive)
+  (find-file "~/Dropbox/org/personal.gpg")
+  )
 (defun korg-open-halcom ()
   "Open the org halcom"
   (interactive)
-  (find-file "~/Dropbox/org/halcom.org")
+  (find-file "~/Dropbox/org/halcom.gpg")
   )
 (defun kris-edit-keybindings ()
   "Edit keybindings in kris-layer"

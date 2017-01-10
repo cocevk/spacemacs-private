@@ -1,6 +1,7 @@
 (evil-leader/set-key "oo" 'korg-open-dir)
 (evil-leader/set-key "oa" 'org-agenda)
 (evil-leader/set-key "oA" 'korg-archive-done-tasks)
+(evil-leader/set-key "op" 'korg-open-personal)
 (evil-leader/set-key "ot" 'korg-open-todo)
 (evil-leader/set-key "on" 'korg-open-notes)
 (evil-leader/set-key "oh" 'korg-open-halcom)

@@ -43,7 +43,7 @@
 
 
 ;; Org Mode Configuration
-(setq org-default-notes-file "~/Dropbox/org/refile.org")
+(setq org-default-notes-file "~/Dropbox/org/inbox.org")
 (setq org-todo-keywords
       '((sequence "TODO" "IN_PROGRESS" "|" "DONE" )))
 (setq org-agenda-files '("~/Dropbox/org"))
@@ -64,6 +64,7 @@
 (setq org-refile-targets
       '((nil :maxlevel . 3)
         (org-agenda-files :maxlevel . 2)))
+;; End Org Mode Configuration
 
 ;; Other stuff
 (setq-default evil-escape-key-sequence "jk")

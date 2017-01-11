@@ -75,3 +75,5 @@
 (setq-default evil-escape-key-sequence "jk")
 ;; Display time in the powerline
 (display-time-mode 1)
+;; Word wrapping
+(add-hook 'text-mode-hook 'turn-on-visual-line-mode)

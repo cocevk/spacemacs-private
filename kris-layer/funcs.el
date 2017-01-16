@@ -77,3 +77,6 @@
 (display-time-mode 1)
 ;; Word wrapping
 (add-hook 'text-mode-hook 'turn-on-visual-line-mode)
+;; Make backspace delete tabs...
+(setq backward-delete-char-untabify-method 'hungry)
+

@@ -59,7 +59,7 @@
          "* TODO %?")
         ("n" "Notes Entry" entry (file+datetree "~/Dropbox/org/notes.org")
          "* %?\nEntered on %U via capture")
-        ("h" "Halcom Notes Entry" entry (file+datetree "~/Dropbox/org/halcom.org")
+        ("h" "Halcom Notes Entry" entry (file+datetree "~/Dropbox/org/halcom.gpg")
          "* %?\nEntered on %U via capture")
         ("i" "Inbox" entry (file+datetree "~/Dropbox/org/inbox.org")
          "* %?\nEntered on %U via capture")
@@ -79,4 +79,6 @@
 (add-hook 'text-mode-hook 'turn-on-visual-line-mode)
 ;; Make backspace delete tabs...
 (setq backward-delete-char-untabify-method 'hungry)
-
+;; Erc configuration
+;; Disable JOIN/PART/QUIT messages in ERC
+(setq erc-hide-list '("JOIN" "PART" "QUIT"))

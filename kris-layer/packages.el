@@ -35,14 +35,23 @@
     ;; emacs-soap-client
     ;; org-jira
     org-alert
+    ;; Enable TLS (for ERC secure connection...)
+    tls
     )
 )
 
+;; TODO: not sure if this is the correct way to init those two...
 (defun kris-layer/init-org-alert ()
   (use-package org-alert
     :defer t
     :init
     (with-eval-after-load 'org-alert))
+  )
+(defun kris-layer/init-tls ()
+  (use-package tls
+    :defer t
+    :init
+    (with-eval-after-load 'tls))
   )
 
 

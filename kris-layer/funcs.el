@@ -68,7 +68,7 @@
 ;; This first element of org-refile-targets decides the heading levels to consider within current file, the second element - within other agenda files.
 (setq org-refile-targets
       '((nil :maxlevel . 3)
-        (org-agenda-files :maxlevel . 2)))
+        (org-agenda-files :maxlevel . 1)))
 ;; End Org Mode Configuration
 
 ;; Other stuff

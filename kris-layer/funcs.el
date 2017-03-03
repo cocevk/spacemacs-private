@@ -24,10 +24,10 @@
   (interactive)
   (find-file "~/Dropbox/org/personal.gpg")
   )
-(defun korg-open-halcom ()
-  "Open the org halcom"
+(defun korg-open-digiverse ()
+  "Open the org digiverse"
   (interactive)
-  (find-file "~/Dropbox/org/halcom.gpg")
+  (find-file "~/Dropbox/org/digiverse.gpg")
   )
 (defun kris-edit-keybindings ()
   "Edit keybindings in kris-layer"
@@ -59,7 +59,7 @@
          "* TODO %?")
         ("n" "Notes Entry" entry (file+datetree "~/Dropbox/org/notes.org")
          "* %?\nEntered on %U via capture")
-        ("h" "Halcom Notes Entry" entry (file+datetree "~/Dropbox/org/halcom.gpg")
+        ("d" "Digiverse Notes Entry" entry (file+datetree "~/Dropbox/org/digiverse.gpg")
          "* %?\nEntered on %U via capture")
         ("i" "Inbox" entry (file+datetree "~/Dropbox/org/inbox.org")
          "* %?\nEntered on %U via capture")

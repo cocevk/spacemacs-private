@@ -29,6 +29,13 @@
   (interactive)
   (find-file "~/Dropbox/org/digiverse.gpg")
   )
+
+(defun korg-open-cheatsheet ()
+  "Open the org cheatsheet"
+  (interactive)
+  (find-file "~/Dropbox/org/cheatsheet.org")
+  )
+
 (defun kris-edit-keybindings ()
   "Edit keybindings in kris-layer"
   (interactive)

@@ -5,6 +5,7 @@
 (evil-leader/set-key "ot" 'korg-open-todo)
 (evil-leader/set-key "on" 'korg-open-notes)
 (evil-leader/set-key "od" 'korg-open-digiverse)
+(evil-leader/set-key "oh" 'korg-open-cheatsheet)
 (evil-leader/set-key "oc" 'org-capture)
 (evil-leader/set-key "oi" 'korg-open-inbox)
 (evil-leader/set-key "oek" 'kris-edit-keybindings)
